@@ -12,7 +12,7 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile
       environment.systemPackages =
-        [ pkgs.vim
+        [
         ];
 
       # Necessary for using flakes on this system.
