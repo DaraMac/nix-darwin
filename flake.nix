@@ -11,9 +11,18 @@
         let
             configuration = { pkgs, ... }: {
                 # List packages installed in system profile
-                environment.systemPackages =
+                environment.systemPackages = with pkgs;
                     [
                     ];
+
+                homebrew = {
+                    enable = true;
+                    onActivation.upgrade = true;
+
+                    casks = [
+                        "iina"
+                    ];
+                };
 
                 nix = {
                     settings = {
