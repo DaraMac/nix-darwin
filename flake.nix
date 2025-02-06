@@ -13,6 +13,7 @@
                 # List packages installed in system profile
                 environment.systemPackages = with pkgs;
                     [
+                        bat
                     ];
 
                 homebrew = {
@@ -20,7 +21,10 @@
                     onActivation.upgrade = true;
 
                     casks = [
+                        "ferdium"
                         "iina"
+                        "netnewswire"
+                        "thunderbird"
                     ];
                 };
 
