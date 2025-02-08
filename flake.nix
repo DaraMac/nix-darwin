@@ -33,6 +33,8 @@
                     ];
                 };
 
+                programs.zsh.enableSyntaxHighlighting = true;
+
                 nix = {
                     settings = {
                         # Necessary for using flakes on this system.
