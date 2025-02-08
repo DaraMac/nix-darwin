@@ -5,15 +5,21 @@
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
         nix-darwin.url = "github:LnL7/nix-darwin/master";
         nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+        mac-app-util.url = "github:hraban/mac-app-util";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs }:
+    outputs = inputs@{ self, nix-darwin, nixpkgs, mac-app-util }:
         let
             configuration = { pkgs, ... }: {
                 # List packages installed in system profile
                 environment.systemPackages = with pkgs;
                     [
                         bat
+                        iina
+                        iterm2
+                        lsd
+                        neovim
+                        net-news-wire
                     ];
 
                 homebrew = {
@@ -22,9 +28,6 @@
 
                     casks = [
                         "ferdium"
-                        "iina"
-                        "netnewswire"
-                        "thunderbird"
                     ];
                 };
 
@@ -46,7 +49,6 @@
                     stateVersion = 6;
                 };
 
-
                 # The platform the configuration will be used on.
                 nixpkgs.hostPlatform = "aarch64-darwin";
             };
@@ -55,7 +57,10 @@
             # Build darwin flake using:
             # $ darwin-rebuild build --flake .#Daras-MacBook-Air
             darwinConfigurations."Daras-MacBook-Air" = nix-darwin.lib.darwinSystem {
-                modules = [ configuration ];
+                modules = [
+                    configuration
+                    mac-app-util.darwinModules.default
+                ];
             };
         };
 }
