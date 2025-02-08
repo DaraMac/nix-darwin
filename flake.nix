@@ -15,11 +15,13 @@
                 environment.systemPackages = with pkgs;
                     [
                         bat
+                        fzf
                         iina
                         iterm2
                         lsd
                         neovim
                         net-news-wire
+                        zoxide
                     ];
 
                 homebrew = {
