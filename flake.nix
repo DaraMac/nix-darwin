@@ -35,6 +35,7 @@
 
                     casks = [
                         "ferdium"
+                        "rustdesk"
                     ];
                 };
 
