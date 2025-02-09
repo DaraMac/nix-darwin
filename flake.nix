@@ -14,6 +14,7 @@
                 # List packages installed in system profile
                 environment.systemPackages = with pkgs;
                     [
+                        anki-bin
                         bat
                         fzf
                         hledger
@@ -24,6 +25,7 @@
                         neovim
                         net-news-wire
                         ripgrep
+                        yazi
                         zoxide
                     ];
 
