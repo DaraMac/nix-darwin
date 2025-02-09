@@ -16,6 +16,8 @@
                     [
                         bat
                         fzf
+                        hledger
+                        hledger-iadd
                         iina
                         iterm2
                         lsd
