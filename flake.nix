@@ -23,6 +23,7 @@
                         lsd
                         neovim
                         net-news-wire
+                        ripgrep
                         zoxide
                     ];
 
