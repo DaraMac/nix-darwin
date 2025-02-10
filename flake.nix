@@ -26,6 +26,8 @@
                         lsd
                         neovim
                         net-news-wire
+                        obsidian
+                        pass
                         ripgrep
                         vesktop
                         yazi
@@ -45,6 +47,8 @@
                         "rustdesk"
                     ];
                 };
+
+                nixpkgs.config.allowUnfree = true;
 
                 fonts.packages = [ ] ++ builtins.filter pkgs.lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
