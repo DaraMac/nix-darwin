@@ -16,10 +16,12 @@
                     [
                         anki-bin
                         bat
+                        fd
                         fzf
                         hledger
                         hledger-iadd
                         iina
+                        imagemagick
                         iterm2
                         lsd
                         neovim
@@ -43,6 +45,8 @@
                         "rustdesk"
                     ];
                 };
+
+                fonts.packages = [ ] ++ builtins.filter pkgs.lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
                 programs.zsh.enableSyntaxHighlighting = true;
 
