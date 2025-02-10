@@ -32,7 +32,11 @@
 
                 homebrew = {
                     enable = true;
-                    onActivation.upgrade = true;
+                    onActivation = {
+                        autoUpdate = true;
+                        cleanup = "zap";
+                        upgrade = true;
+                    };
 
                     casks = [
                         "ferdium"
