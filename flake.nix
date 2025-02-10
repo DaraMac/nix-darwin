@@ -25,6 +25,7 @@
                         neovim
                         net-news-wire
                         ripgrep
+                        vesktop
                         yazi
                         zoxide
                     ];
