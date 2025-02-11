@@ -31,6 +31,7 @@
                         pinentry_mac
                         ripgrep
                         thunderbird-latest-unwrapped
+                        tmux
                         vesktop
                         yazi
                         zoxide
