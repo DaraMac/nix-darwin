@@ -29,6 +29,7 @@
                         obsidian
                         pass
                         ripgrep
+                        thunderbird-latest-unwrapped
                         vesktop
                         yazi
                         zoxide
