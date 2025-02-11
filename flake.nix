@@ -28,6 +28,7 @@
                         net-news-wire
                         obsidian
                         pass
+                        pinentry_mac
                         ripgrep
                         thunderbird-latest-unwrapped
                         vesktop
@@ -77,6 +78,8 @@
                 nixpkgs.hostPlatform = "aarch64-darwin";
 
                 security.pam.enableSudoTouchIdAuth = true;
+
+                programs.gnupg.agent.enable = true;
             };
         in
             {
