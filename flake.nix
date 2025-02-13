@@ -32,6 +32,7 @@
                         ripgrep
                         thunderbird-latest-unwrapped
                         tmux
+                        uv
                         vesktop
                         yazi
                         zoxide
