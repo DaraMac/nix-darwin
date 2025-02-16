@@ -35,6 +35,7 @@
                         uv
                         vesktop
                         yazi
+                        zotero
                         zoxide
                     ];
 
