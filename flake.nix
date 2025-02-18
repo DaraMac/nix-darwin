@@ -29,6 +29,7 @@
                         obsidian
                         pass
                         pinentry_mac
+                        renameutils
                         ripgrep
                         thunderbird-latest-unwrapped
                         tmux
