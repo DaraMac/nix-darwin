@@ -38,6 +38,7 @@
                         yazi
                         zotero
                         zoxide
+                        zsh-completions
                     ];
 
                 homebrew = {
