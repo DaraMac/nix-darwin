@@ -49,12 +49,8 @@
                         upgrade = true;
                     };
 
-                    taps = [
-                        "runtimeverification/k"
-                    ];
-
                     brews = [
-                        "kframework"
+                        "runtimeverification/k/kframework"
                     ];
 
                     casks = [
