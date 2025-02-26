@@ -49,6 +49,14 @@
                         upgrade = true;
                     };
 
+                    taps = [
+                        "runtimeverification/k"
+                    ];
+
+                    brews = [
+                        "kframework"
+                    ];
+
                     casks = [
                         "ferdium"
                         "rustdesk"
