@@ -90,7 +90,7 @@
                 # The platform the configuration will be used on.
                 nixpkgs.hostPlatform = "aarch64-darwin";
 
-                security.pam.enableSudoTouchIdAuth = true;
+                security.pam.services.sudo_local.touchIdAuth = true;
 
                 programs.gnupg.agent.enable = true;
             };
