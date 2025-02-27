@@ -55,6 +55,7 @@
 
                     casks = [
                         "ferdium"
+                        "inkscape"
                         "rustdesk"
                     ];
                 };
