@@ -54,6 +54,7 @@
                     ];
 
                     casks = [
+                        "breaktimer"
                         "ferdium"
                         "inkscape"
                         "rustdesk"
