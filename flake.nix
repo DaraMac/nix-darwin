@@ -31,7 +31,7 @@
                         pinentry_mac
                         renameutils
                         ripgrep
-                        thunderbird-latest-unwrapped
+                        thunderbird-latest
                         tmux
                         uv
                         vesktop
