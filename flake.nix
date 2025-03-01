@@ -16,6 +16,7 @@
                     [
                         anki-bin
                         bat
+                        fastfetch
                         fd
                         fzf
                         hledger
