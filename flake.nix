@@ -15,6 +15,7 @@
         };
 
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+        nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     };
 
     outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
@@ -111,9 +112,16 @@
 
                     home-manager.darwinModules.home-manager
                     {
+                        nixpkgs.overlays = [ inputs.nixpkgs-firefox-darwin.overlay ];
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
+                            users.daramac = {
+                                programs.firefox = {
+                                    enable = true;
+                                    package = pkgs.firefox-bin;
+                                };
+                            };
                         };
                     }
                 ];
