@@ -2,13 +2,22 @@
     description = "nix-darwin system flake";
 
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-        nix-darwin.url = "github:LnL7/nix-darwin/master";
-        nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            inputs.nixpkgs.follows = "nixpkgs";
+            url = "github:nix-community/home-manager";
+        };
+
         mac-app-util.url = "github:hraban/mac-app-util";
+
+        nix-darwin = {
+            inputs.nixpkgs.follows = "nixpkgs";
+            url = "github:LnL7/nix-darwin/master";
+        }
+
+            nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs, mac-app-util }:
+    outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
         let
             configuration = { pkgs, ... }: {
                 # List packages installed in system profile
@@ -95,12 +104,18 @@
             };
         in
             {
-            # Build darwin flake using:
-            # $ darwin-rebuild build --flake .#Daras-MacBook-Air
             darwinConfigurations."Daras-MacBook-Air" = nix-darwin.lib.darwinSystem {
                 modules = [
                     configuration
                     mac-app-util.darwinModules.default
+
+                    home-manager.darwinModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                        };
+                    }
                 ];
             };
         };
