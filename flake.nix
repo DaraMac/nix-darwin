@@ -12,9 +12,9 @@
         nix-darwin = {
             inputs.nixpkgs.follows = "nixpkgs";
             url = "github:LnL7/nix-darwin/master";
-        }
+        };
 
-            nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+        nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
     outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
