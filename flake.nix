@@ -66,6 +66,7 @@
                     casks = [
                         "breaktimer"
                         "ferdium"
+                        "firefox"
                         "inkscape"
                         "rustdesk"
                     ];
