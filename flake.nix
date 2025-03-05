@@ -15,7 +15,6 @@
         };
 
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-        nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
     };
 
     outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
@@ -73,19 +72,20 @@
                     ];
                 };
 
-                nixpkgs.config.allowUnfree = true;
 
                 fonts.packages = [ ] ++ builtins.filter pkgs.lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-                programs.zsh.enableSyntaxHighlighting = true;
+                programs = {
+                    gnupg.agent.enable = true;
+                    zsh.enableSyntaxHighlighting = true;
+                };
 
                 nix = {
-                    settings = {
-                        # Necessary for using flakes on this system.
-                        experimental-features = "nix-command flakes";
-                    };
                     gc.automatic = true;
                     optimise.automatic = true;
+
+                    # Necessary for using flakes on this system.
+                    settings.experimental-features = "nix-command flakes";
                 };
 
                 system = {
@@ -97,12 +97,14 @@
                     stateVersion = 6;
                 };
 
-                # The platform the configuration will be used on.
-                nixpkgs.hostPlatform = "aarch64-darwin";
+                nixpkgs = {
+                    config.allowUnfree = true;
+
+                    # The platform the configuration will be used on.
+                    hostPlatform = "aarch64-darwin";
+                };
 
                 security.pam.services.sudo_local.touchIdAuth = true;
-
-                programs.gnupg.agent.enable = true;
             };
         in
             {
@@ -113,15 +115,10 @@
 
                     home-manager.darwinModules.home-manager
                     {
-                        # nixpkgs.overlays = [ inputs.nixpkgs-firefox-darwin.overlay ];
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
                             users.daramac = {
-                                # programs.firefox = {
-                                #     enable = true;
-                                #     package = pkgs.firefox-bin;
-                                # };
                             };
                         };
                     }
