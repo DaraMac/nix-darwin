@@ -27,7 +27,6 @@
                         bat
                         fastfetch
                         fd
-                        firefox
                         fzf
                         hledger
                         hledger-iadd
