@@ -28,6 +28,7 @@
                         bat
                         fastfetch
                         fd
+                        firefox
                         fzf
                         hledger
                         hledger-iadd
@@ -112,15 +113,15 @@
 
                     home-manager.darwinModules.home-manager
                     {
-                        nixpkgs.overlays = [ inputs.nixpkgs-firefox-darwin.overlay ];
+                        # nixpkgs.overlays = [ inputs.nixpkgs-firefox-darwin.overlay ];
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
                             users.daramac = {
-                                programs.firefox = {
-                                    enable = true;
-                                    package = pkgs.firefox-bin;
-                                };
+                                # programs.firefox = {
+                                #     enable = true;
+                                #     package = pkgs.firefox-bin;
+                                # };
                             };
                         };
                     }
