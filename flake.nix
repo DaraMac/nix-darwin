@@ -126,6 +126,9 @@
                                     homeDirectory = "/Users/daramac";
                                     stateVersion = "25.05";
                                     username = "daramac";
+
+                                    file."hledger-iadd".target = ".config/hledger-iadd/config.conf";
+                                    file."hledger-iadd".text = ''date-format = "%Y-%m-%d"'';
                                 };
                             };
                         };
