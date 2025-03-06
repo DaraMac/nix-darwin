@@ -50,6 +50,7 @@
                         zoxide
                         zsh-completions
                     ];
+                environment.variables.EDITOR = "nvim";
 
                 homebrew = {
                     enable = true;
