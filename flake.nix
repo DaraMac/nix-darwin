@@ -31,7 +31,6 @@
                             fastfetch
                             fd
                             fzf
-                            ghostty
                             hledger
                             hledger-iadd
                             iina
@@ -74,6 +73,7 @@
                         "breaktimer"
                         "ferdium"
                         "firefox"
+                        "ghostty"
                         "inkscape"
                         "rustdesk"
                     ];
