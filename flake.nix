@@ -130,6 +130,25 @@
                                     file."hledger-iadd".target = ".config/hledger-iadd/config.conf";
                                     file."hledger-iadd".text = ''date-format = "%Y-%m-%d"'';
                                 };
+
+                                programs = {
+                                    home-manager.enable = true;
+
+                                    git = {
+                                        enable = true;
+                                        userEmail = "DaraMac@users.noreply.github.com";
+                                        userName  = "dmac";
+                                        extraConfig = {
+                                            core.editor = "nvim";
+                                            diff.algorithm = "histogram";
+                                            init.defaultBranch = "main";
+                                            log.date = "iso";
+                                            merge.conflictstyle = "diff3";
+                                            pull.rebase = "true";
+                                            push.autoSetupRemote = "true";
+                                        };
+                                    };
+                                };
                             };
                         };
                     }
