@@ -31,6 +31,7 @@
                             fastfetch
                             fd
                             fzf
+                            ghostty
                             hledger
                             hledger-iadd
                             iina
