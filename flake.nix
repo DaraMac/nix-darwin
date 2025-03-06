@@ -190,6 +190,10 @@
                                         oh-my-zsh.enable = true;
                                         syntaxHighlighting.enable = true;
                                         shellAliases = {
+                                            # Neovim
+                                            vi = ''nvim'';
+                                            vim = ''nvim'';
+
                                             # fzf
                                             v = "fzf --bind 'enter:become(nvim {})'";
 
@@ -295,7 +299,8 @@
                                             glola=''git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'';
                                             glols=''git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'';
                                             glol=''git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"'';
-                                            glo="git log --oneline --decorate";
+                                            # modified version of https://stackoverflow.com/a/9463536 and lines above here
+                                            glo=''git log --pretty="format:%C(yellow)%h %Creset%s %Cblue%>(12)%ad" --date=relative'';
                                             glog="git log --oneline --decorate --graph";
                                             gloga="git log --oneline --decorate --graph --all";
 
@@ -543,6 +548,9 @@
 
                                             # Location of ledger file for hledger
                                             export LEDGER_FILE='/Users/daramac/Documents/accounts/2025.journal'
+
+                                            # Location of current file for time-tracker bartib
+                                            export BARTIB_FILE='/Users/daramac/.local/share/bartib/activities.bartib'
 
                                             # Use bat for highighted manual
                                             export MANPAGER="sh -c 'col -bx | bat -l man -p'"
