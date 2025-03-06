@@ -25,6 +25,7 @@
                     [
                         anki-bin
                         bat
+                        btop
                         fastfetch
                         fd
                         fzf
