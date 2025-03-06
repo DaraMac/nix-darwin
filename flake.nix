@@ -549,6 +549,8 @@
                                             # Location of ledger file for hledger
                                             export LEDGER_FILE='/Users/daramac/Documents/accounts/2025.journal'
 
+                                            source ~/opt/bartibCompletion.sh
+
                                             # Location of current file for time-tracker bartib
                                             export BARTIB_FILE='/Users/daramac/.local/share/bartib/activities.bartib'
 
