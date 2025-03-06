@@ -81,10 +81,7 @@
 
                 fonts.packages = [ ] ++ builtins.filter pkgs.lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
-                programs = {
-                    gnupg.agent.enable = true;
-                    zsh.enableSyntaxHighlighting = true;
-                };
+                programs.gnupg.agent.enable = true;
 
                 nix = {
                     gc.automatic = true;
@@ -140,6 +137,7 @@
                                 programs = {
                                     home-manager.enable = true;
 
+                                    fzf.enable = true;
                                     git = {
                                         enable = true;
                                         userEmail = "DaraMac@users.noreply.github.com";
@@ -179,6 +177,29 @@
                                             bind  %  split-window -h -c "#{pane_current_path}"
                                             bind '"' split-window -v -c "#{pane_current_path}"
                                         '';
+                                    };
+
+                                    zoxide.enable = true;
+
+                                    # .oh-my-zsh/themes/dracula.zsh-theme
+                                    # .oh-my-zsh/themes/lib/async.zsh
+                                    zsh = {
+                                        enable = true;
+                                        autosuggestion.enable = true;
+                                        dotDir = ".config/zsh";
+                                        oh-my-zsh.enable = true;
+                                        syntaxHighlighting.enable = true;
+                                        shellAliases = {
+                                            # fzf
+                                            v = "fzf --bind 'enter:become(nvim {})'";
+
+                                            # ls
+                                            la = "lsd -lA";
+                                            ll = "lsd -l";
+                                            lr = "lsd -lr";
+                                            ls = "lsd";
+                                            lt = "lsd --tree";
+                                        };
                                     };
                                 };
                             };
