@@ -115,10 +115,19 @@
 
                     home-manager.darwinModules.home-manager
                     {
+                        # Need this line or else it just breaks
+                        # https://github.com/nix-community/home-manager/issues/6036#issuecomment-2466986456
+                        users.users.daramac.home = "/Users/daramac";
                         home-manager = {
                             useGlobalPkgs = true;
                             useUserPackages = true;
-                            users.jdoe = {};
+                            users.daramac = {
+                                home = {
+                                    homeDirectory = "/Users/daramac";
+                                    stateVersion = "25.05";
+                                    username = "daramac";
+                                };
+                            };
                         };
                     }
                 ];
