@@ -21,38 +21,41 @@
         let
             configuration = { pkgs, ... }: {
                 # List packages installed in system profile
-                environment.systemPackages = with pkgs;
-                    [
-                        anki-bin
-                        bartib
-                        bat
-                        btop
-                        fastfetch
-                        fd
-                        fzf
-                        hledger
-                        hledger-iadd
-                        iina
-                        imagemagick
-                        iterm2
-                        lsd
-                        neovim
-                        net-news-wire
-                        obsidian
-                        pass
-                        pinentry_mac
-                        renameutils
-                        ripgrep
-                        thunderbird-latest
-                        tmux
-                        uv
-                        vesktop
-                        yazi
-                        zotero
-                        zoxide
-                        zsh-completions
-                    ];
-                environment.variables.EDITOR = "nvim";
+                environment = {
+                    systemPackages = with pkgs;
+                        [
+                            anki-bin
+                            bartib
+                            bat
+                            btop
+                            fastfetch
+                            fd
+                            fzf
+                            hledger
+                            hledger-iadd
+                            iina
+                            imagemagick
+                            iterm2
+                            lsd
+                            neovim
+                            net-news-wire
+                            obsidian
+                            pass
+                            pinentry_mac
+                            renameutils
+                            ripgrep
+                            thunderbird-latest
+                            tmux
+                            uv
+                            vesktop
+                            yazi
+                            zotero
+                            zoxide
+                            zsh-completions
+                        ];
+
+                    variables.EDITOR = "nvim";
+                };
 
                 homebrew = {
                     enable = true;
