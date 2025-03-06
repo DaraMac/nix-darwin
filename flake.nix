@@ -148,6 +148,16 @@
                                             push.autoSetupRemote = "true";
                                         };
                                     };
+
+                                    lsd = {
+                                        enable = true;
+                                        settings = {
+                                            # date = "+%Y-%m-%d %H:%M";
+                                            date = "relative";
+                                            sorting.dir-grouping = "first";
+                                            symlink-arrow = "→";
+                                        };
+                                    };
                                 };
                             };
                         };
