@@ -164,6 +164,11 @@
                                         };
                                     };
 
+                                    starship = {
+                                        enable = true;
+                                        enableZshIntegration = true;
+                                    };
+
                                     tmux = {
                                         enable = true;
                                         keyMode = "vi";
