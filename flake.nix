@@ -187,8 +187,6 @@
 
                                     zoxide.enable = true;
 
-                                    # .oh-my-zsh/themes/dracula.zsh-theme
-                                    # .oh-my-zsh/themes/lib/async.zsh
                                     zsh = {
                                         enable = true;
                                         autosuggestion.enable = true;
