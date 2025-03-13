@@ -75,6 +75,7 @@
                         "ferdium"
                         "firefox"
                         "ghostty"
+                        "heroic"
                         "inkscape"
                         "rustdesk"
                     ];
