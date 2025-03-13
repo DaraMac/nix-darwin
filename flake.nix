@@ -31,6 +31,7 @@
                             fastfetch
                             fd
                             fzf
+                            gnupg
                             hledger
                             hledger-iadd
                             iina
