@@ -72,6 +72,7 @@
 
                     casks = [
                         "breaktimer"
+                        "calibre"
                         "ferdium"
                         "firefox"
                         "ghostty"
