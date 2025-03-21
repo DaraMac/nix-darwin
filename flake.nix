@@ -32,6 +32,7 @@
                             fd
                             fzf
                             gnupg
+                            hledger
                             hledger-iadd
                             iina
                             imagemagick
@@ -74,7 +75,6 @@
                     };
 
                     brews = [
-                        "hledger"
                         "runtimeverification/k/kframework"
                     ];
 
