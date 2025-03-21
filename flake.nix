@@ -50,7 +50,6 @@
                             fd
                             fzf
                             gnupg
-                            hledger
                             hledger-iadd
                             iina
                             imagemagick
@@ -91,6 +90,10 @@
                         cleanup = "zap";
                         upgrade = true;
                     };
+
+                    brews = [
+                        "hledger"
+                    ];
 
                     casks = [
                         "breaktimer"
