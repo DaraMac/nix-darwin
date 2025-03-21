@@ -54,7 +54,15 @@
                             zsh-completions
                         ];
 
-                    variables.EDITOR = "nvim";
+                    variables = {
+                        BARTIB_FILE = "/Users/daramac/.local/share/bartib/activities.bartib";
+                        EDITOR = "nvim";
+                        LEDGER_FILE="/Users/daramac/Documents/accounts/2025.journal";
+
+                        # Use bat for highighted manual
+                        MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+                        MANROFFOPT = "-c";
+                    };
                 };
 
                 homebrew = {
@@ -553,18 +561,7 @@
                                             ### end git functions
 
 
-                                            # Location of ledger file for hledger
-                                            export LEDGER_FILE='/Users/daramac/Documents/accounts/2025.journal'
-
                                             source ~/opt/bartibCompletion.sh
-
-                                            # Location of current file for time-tracker bartib
-                                            export BARTIB_FILE='/Users/daramac/.local/share/bartib/activities.bartib'
-
-                                            # Use bat for highighted manual
-                                            export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-                                            export MANROFFOPT="-c"
-
 
                                             # Setup yazi alias
                                             function y() {
