@@ -14,10 +14,28 @@
             url = "github:LnL7/nix-darwin/master";
         };
 
+        # Homebrew installation
+        # nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+        nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
+
+        # Optional: Declarative tap management
+        homebrew-core = {
+            url = "github:homebrew/homebrew-core";
+            flake = false;
+        };
+        homebrew-cask = {
+            url = "github:homebrew/homebrew-cask";
+            flake = false;
+        };
+        homebrew-bundle = {
+            url = "github:homebrew/homebrew-bundle";
+            flake = false;
+        };
+
         nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
 
-    outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, mac-app-util }:
+    outputs = inputs@{ self, nix-darwin, nix-homebrew, homebrew-core, homebrew-cask, homebrew-bundle, nixpkgs, home-manager, mac-app-util }:
         let
             configuration = { pkgs, ... }: {
                 # List packages installed in system profile
@@ -74,18 +92,11 @@
                         upgrade = true;
                     };
 
-                    brews = [
-                        "runtimeverification/k/kframework"
-                    ];
-
                     casks = [
                         "breaktimer"
-                        "calibre"
                         "ferdium"
                         "firefox"
-                        "ghostty"
                         "heroic"
-                        "inkscape"
                         "rustdesk"
                     ];
                 };
@@ -127,6 +138,32 @@
                 modules = [
                     configuration
                     mac-app-util.darwinModules.default
+
+                    nix-homebrew.darwinModules.nix-homebrew
+                    {
+                        nix-homebrew = {
+                            # Install Homebrew under the default prefix
+                            enable = true;
+
+                            # User owning the Homebrew prefix
+                            user = "daramac";
+
+                            # Optional: Declarative tap management
+                            taps = {
+                                "homebrew/homebrew-bundle" = homebrew-bundle;
+                                "homebrew/homebrew-cask" = homebrew-cask;
+                                "homebrew/homebrew-core" = homebrew-core;
+                            };
+
+                            # Optional: Enable fully-declarative tap management
+                            #
+                            # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
+                            mutableTaps = false;
+
+                            # Automatically migrate existing Homebrew installations
+                            autoMigrate = true;
+                        };
+                    }
 
                     home-manager.darwinModules.home-manager
                     {
