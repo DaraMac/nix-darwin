@@ -100,7 +100,6 @@
                         "ferdium"
                         "firefox"
                         "heroic"
-                        "julia"
                         "rustdesk"
                     ];
                 };
