@@ -73,7 +73,7 @@
                         ];
 
                     variables = {
-                        BARTIB_FILE = "/Users/daramac/.local/share/bartib/activities.bartib";
+                        BARTIB_FILE = "/Users/daramac/.local/share/bartib/2025.bartib";
                         EDITOR = "nvim";
                         LEDGER_FILE="/Users/daramac/Documents/accounts/2025.journal";
 
