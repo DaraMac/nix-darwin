@@ -15,8 +15,8 @@
         };
 
         # Homebrew installation
-        # nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-        nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
+        nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+        # nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
 
         # Optional: Declarative tap management
         homebrew-core = {
