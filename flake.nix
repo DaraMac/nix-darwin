@@ -477,7 +477,7 @@
 
                                         };
 
-                                        initExtra = ''
+                                        initContent = ''
                                             # start git functions
 
                                             # Check for develop and similarly named branches
