@@ -252,11 +252,8 @@
                                             v = "fzf --bind 'enter:become(nvim {})'";
 
                                             # ls
-                                            la = "lsd -lA";
-                                            ll = "lsd -l";
+                                            # The other aliases are provided automatically by home manager
                                             lr = "lsd -lr";
-                                            ls = "lsd";
-                                            lt = "lsd --tree";
 
                                             # start git aliases
                                             ggpur="ggu";
