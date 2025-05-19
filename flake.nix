@@ -45,6 +45,7 @@
                             bartib
                             bat
                             btop
+                            calibre
                             fastfetch
                             fd
                             fzf
