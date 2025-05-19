@@ -45,7 +45,6 @@
                             bartib
                             bat
                             btop
-                            calibre
                             fastfetch
                             fd
                             fzf
@@ -98,6 +97,7 @@
 
                     casks = [
                         "breaktimer"
+                        "calibre"
                         "ferdium"
                         "firefox"
                         "heroic"
