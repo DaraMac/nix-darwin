@@ -143,6 +143,7 @@
             darwinConfigurations."Daras-MacBook-Air" = nix-darwin.lib.darwinSystem {
                 modules = [
                     configuration
+                    ./nixcats.nix
                     mac-app-util.darwinModules.default
 
                     nix-homebrew.darwinModules.nix-homebrew
