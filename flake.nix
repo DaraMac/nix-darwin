@@ -49,6 +49,7 @@
                             fd
                             fzf
                             gnupg
+                            helix
                             hledger-iadd
                             iina
                             imagemagick
