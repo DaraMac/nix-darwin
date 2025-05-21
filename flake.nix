@@ -45,6 +45,7 @@
                             bartib
                             bat
                             btop
+                            dua
                             evil-helix
                             fastfetch
                             fd
