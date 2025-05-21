@@ -45,11 +45,11 @@
                             bartib
                             bat
                             btop
+                            evil-helix
                             fastfetch
                             fd
                             fzf
                             gnupg
-                            helix
                             hledger-iadd
                             iina
                             imagemagick
