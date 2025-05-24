@@ -67,7 +67,6 @@
                             thunderbird-latest
                             tmux
                             uv
-                            vesktop
                             yazi
                             zotero
                             zoxide
@@ -100,6 +99,7 @@
                     casks = [
                         "breaktimer"
                         "calibre"
+                        "discord"
                         "ferdium"
                         "firefox"
                         "heroic"
