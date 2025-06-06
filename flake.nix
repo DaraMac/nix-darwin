@@ -63,7 +63,7 @@
                             pinentry_mac
                             renameutils
                             ripgrep
-                            texliveFull
+                            # texliveFull
                             thunderbird-latest
                             tmux
                             uv
