@@ -245,7 +245,7 @@
                                     zsh = {
                                         enable = true;
                                         autosuggestion.enable = true;
-                                        dotDir = ".config/zsh";
+                                        dotDir = "/Users/daramac/.config/zsh/";
                                         oh-my-zsh.enable = true;
                                         syntaxHighlighting.enable = true;
                                         shellAliases = {
