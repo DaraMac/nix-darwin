@@ -44,29 +44,20 @@
                             anki-bin
                             bartib
                             bat
-                            btop
                             dua
-                            evil-helix
-                            fastfetch
                             fd
                             fzf
                             gnupg
                             hledger-iadd
-                            iina
-                            imagemagick
                             iterm2
                             lsd
                             neovim
-                            net-news-wire
                             obsidian
                             pass
                             pinentry_mac
-                            renameutils
                             ripgrep
-                            # texliveFull
                             thunderbird-latest
                             tmux
-                            uv
                             yazi
                             zotero
                             zoxide
@@ -98,12 +89,9 @@
 
                     casks = [
                         "breaktimer"
-                        "calibre"
                         "discord"
-                        "ferdium"
                         "firefox"
                         "heroic"
-                        "rustdesk"
                     ];
                 };
 
