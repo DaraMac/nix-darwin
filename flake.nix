@@ -41,9 +41,7 @@
                 environment = {
                     systemPackages = with pkgs;
                         [
-                            anki-bin
                             bartib
-                            bat
                             dua
                             fd
                             fzf
