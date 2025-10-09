@@ -41,23 +41,16 @@
                 environment = {
                     systemPackages = with pkgs;
                         [
-                            bartib
-                            dua
                             fd
                             fzf
                             gnupg
-                            hledger-iadd
                             iterm2
                             lsd
                             neovim
-                            obsidian
                             pass
                             pinentry_mac
                             ripgrep
                             thunderbird-latest
-                            tmux
-                            yazi
-                            zotero
                             zoxide
                             zsh-completions
                         ];
@@ -80,13 +73,7 @@
                         cleanup = "zap";
                         upgrade = true;
                     };
-
-                    brews = [
-                        "hledger"
-                    ];
-
                     casks = [
-                        "breaktimer"
                         "discord"
                         "firefox"
                         "heroic"
